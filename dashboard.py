@@ -32,7 +32,8 @@ def node_analista(state: AgentState):
         api_key = os.environ.get("GOOGLE_API_KEY")
         
         # URL con el modelo Lite que confirmamos
-        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite-001:generateContent?key={api_key}"
+       # Usamos gemini-1.5-flash que es el más estable para el plan gratuito
+url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={api_key}"
         
         headers = {'Content-Type': 'application/json'}
         payload = {
@@ -52,7 +53,7 @@ def node_analista(state: AgentState):
             
     except Exception as e:  # <--- ESTE es el bloque que faltaba o estaba mal puesto
         return {"audit_report": f"⚠️ Error crítico: {str(e)}"}
-        
+
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
     # Aquí llamas a tu función node_analista que ya tenías creada
