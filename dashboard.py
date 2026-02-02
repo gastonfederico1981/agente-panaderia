@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 
 # Cargar variables de entorno (Localmente usa .env, en Render usa las de "Environment")
 load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+# Cambia esto al principio del dashboard.py
+api_key = os.getenv("LLAVE_MAESTRA")
 
 if api_key:
     genai.configure(api_key=api_key)
@@ -32,23 +33,19 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
-        # 1. Traemos la llave directamente del sistema (Render)
-        llave_sistema = os.getenv("GOOGLE_API_KEY")
+        # Intentamos obtener la clave de Render
+        llave_sistema = os.environ.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
         
         if not llave_sistema:
-            return {"audit_report": "❌ Error: La variable GOOGLE_API_KEY no está configurada en Render."}
+            return {"audit_report": "❌ Error: Render no entregó la clave al código. Revisa la pestaña Environment."}
         
-        # 2. Configuramos la API justo antes de usarla
+        # Diagnóstico de seguridad (solo muestra los primeros 4 caracteres)
+        st.write(f"🔍 Diagnóstico: Usando clave que empieza con: {llave_sistema[:4]}...")
+
         genai.configure(api_key=llave_sistema)
-        
-        # 3. Llamamos al modelo
         model = genai.GenerativeModel('gemini-1.5-flash')
         
-        prompt = f"Actúa como un Auditor Senior de L'Art du Data. Analiza estos datos: {state['data_summary']}"
-        
-        # 4. Generamos contenido
-        response = model.generate_content(prompt)
-        
+        response = model.generate_content(f"Analiza esto brevemente: {state['data_summary']}")
         return {"audit_report": response.text}
         
     except Exception as e:
