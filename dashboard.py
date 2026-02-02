@@ -35,18 +35,21 @@ class AgentState(TypedDict):
 import google.generativeai as genai
 from google.api_core import client_options
 
+import google.generativeai as genai
+import os
+
 def node_analista(state: AgentState):
     try:
+        # 1. Obtenemos la llave de Render
         llave = os.environ.get("GOOGLE_API_KEY")
+        genai.configure(api_key=llave)
         
-        # FORZAMOS LA VERSIÓN V1 (ESTABLE) Y EL ENDPOINT CORRECTO
-        options = client_options.ClientOptions(api_endpoint="generativelanguage.googleapis.com")
-        genai.configure(api_key=llave, client_options=options)
-        
-        # USAMOS EL NOMBRE COMPLETO DEL MODELO
+        # 2. Usamos el nombre técnico completo del modelo
+        # Esto evita que la librería intente adivinar la versión
         model = genai.GenerativeModel(model_name='models/gemini-1.5-flash')
         
-        prompt = f"Actúa como Auditor Senior de L'Art du Data. Analiza: {state['data_summary']}"
+        # 3. Llamada al modelo
+        prompt = f"Actúa como Auditor de L'Art du Data. Analiza: {state['data_summary']}"
         response = model.generate_content(prompt)
         
         return {"audit_report": response.text}
