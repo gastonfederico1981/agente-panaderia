@@ -33,7 +33,7 @@ class AgentState(TypedDict):
 def node_analista(state: AgentState):
     try:
         genai.configure(api_key=st.session_state.api_key_actual)
-        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+        model = model = genai.GenerativeModel('gemini-1.5-flash-latest')
         prompt = f"Eres el Auditor Senior de L Art du Data. Analiza esto: {state['data_summary']}"
         response = model.generate_content(prompt)
         return {"audit_report": response.text}
