@@ -62,14 +62,14 @@ if "historial" not in st.session_state:
     st.session_state.historial = []
 
 # --- BARRA LATERAL (MENÚ DE NAVEGACIÓN) ---
-wwith st.sidebar:
+with st.sidebar:
     st.markdown("## 🛡️ Panel de Control")
     menu = st.radio("Módulos:", ["🏠 Inicio", "📊 Auditoría Activa", "💬 Consultoría AI"])
     st.divider()
     st.session_state.sucursal_seleccionada = st.selectbox("Sucursal:", SUCURSALES)
     # ELIMINAMOS LA LÍNEA DE API_KEY_ACTUAL
     st.caption("L'Art du Data v2.0 - 2026")
-    
+
 # --- MÓDULO 1: INICIO ---
 if menu == "🏠 Inicio":
     st.markdown('<p class="main-title">L\'Art du Data</p>', unsafe_allow_html=True)
