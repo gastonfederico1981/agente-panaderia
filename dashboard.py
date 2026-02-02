@@ -32,16 +32,25 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
-        # Forzamos el uso de la api_key que cargamos al principio del archivo
-        if not api_key:
-            return {"audit_report": "❌ Error: No se encontró la API Key en el sistema (Render)."}
-            
-        genai.configure(api_key=api_key)
+        # 1. Traemos la llave directamente del sistema (Render)
+        llave_sistema = os.getenv("GOOGLE_API_KEY")
+        
+        if not llave_sistema:
+            return {"audit_report": "❌ Error: La variable GOOGLE_API_KEY no está configurada en Render."}
+        
+        # 2. Configuramos la API justo antes de usarla
+        genai.configure(api_key=llave_sistema)
+        
+        # 3. Llamamos al modelo
         model = genai.GenerativeModel('gemini-1.5-flash')
         
-        prompt = f"Eres el Auditor Senior de L Art du Data. Analiza esto: {state['data_summary']}"
+        prompt = f"Actúa como un Auditor Senior de L'Art du Data. Analiza estos datos: {state['data_summary']}"
+        
+        # 4. Generamos contenido
         response = model.generate_content(prompt)
+        
         return {"audit_report": response.text}
+        
     except Exception as e:
         return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
