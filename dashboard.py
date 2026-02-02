@@ -1,12 +1,10 @@
 import streamlit as st
 import pandas as pd
-import google.generativeai as genai
 import requests
 import json
 import os
-from typing import TypedDict  # <--- AGREGÁ ESTA LÍNEA
+from typing import TypedDict
 from dotenv import load_dotenv
-from google.api_core import client_options
 
 # Cargar variables de entorno (Localmente usa .env, en Render usa las de "Environment")
 load_dotenv()
