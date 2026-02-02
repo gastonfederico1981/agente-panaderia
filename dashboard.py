@@ -34,21 +34,29 @@ class AgentState(TypedDict):
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
-        # Forzamos la configuración limpia
+        
+        # 1. Configuración forzada
         genai.configure(api_key=llave)
         
-        # CAMBIO CLAVE: Usamos 'models/gemini-1.5-flash' (nombre completo)
-        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
+        # 2. Instanciamos el modelo usando el nombre más compatible
+        # A veces 'gemini-1.5-flash-latest' funciona mejor en entornos de nube
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
-        prompt = f"Actúa como un Auditor Senior. Analiza estos datos: {state['data_summary']}"
+        prompt = f"Analiza estos datos de panadería y genera un reporte: {state['data_summary']}"
         
-        # Llamada directa
+        # 3. Generación de contenido
         response = model.generate_content(prompt)
         
         return {"audit_report": response.text}
+        
     except Exception as e:
-        # Si falla, que nos diga exactamente qué pasó
-        return {"audit_report": f"❌ Error de IA: {str(e)}"}
+        # Si el error 404 persiste, intentamos con el modelo Pro como backup automático
+        try:
+            model_alt = genai.GenerativeModel('gemini-pro')
+            response = model_alt.generate_content(f"Analiza esto: {state['data_summary']}")
+            return {"audit_report": response.text}
+        except:
+            return {"audit_report": f"❌ Error de IA persistente: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
