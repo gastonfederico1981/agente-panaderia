@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copiamos el requirements y lo instalamos
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --proto-max-depth 2 -r requirements.txt
 
 # Copiamos el resto del código
 COPY . .

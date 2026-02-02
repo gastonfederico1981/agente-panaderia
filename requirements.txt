@@ -4,3 +4,4 @@ twilio
 pandas
 langgraph
 langchain-google-genai
+python-dotenv
