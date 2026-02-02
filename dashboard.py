@@ -1,20 +1,21 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
-from typing import TypedDict
-from langgraph.graph import StateGraph, END
-from langgraph.checkpoint.memory import MemorySaver
+import os
+from dotenv import load_dotenv
 
-# --- CONFIGURACIÓN ESTÉTICA ---
+# Cargar variables de entorno (Localmente usa .env, en Render usa las de "Environment")
+load_dotenv()
+api_key = os.getenv("GOOGLE_API_KEY")
 
-st.set_page_config(
-    page_title="SmartInsight_Ia- Análisis Multirrubro", 
-    page_icon="📊", 
-    layout="wide"
-)
+if api_key:
+    genai.configure(api_key=api_key)
+else:
+    st.error("Falta la GOOGLE_API_KEY. Por favor, configúrala en Render.")
 
-st.title("📊 Panel de Inteligencia de Negocios")
-st.markdown("### Análisis de tickets y optimización de ventas mediante IA")
+# --- Tu lógica de la App de aquí en adelante ---
+st.title("🚀 SmartInsight AI")
+st.subheader("Análisis inteligente para tu negocio")
 
 # --- INICIALIZACIÓN DE ESTADOS ---
 if 'messages' not in st.session_state: st.session_state.messages = []
