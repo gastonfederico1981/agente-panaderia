@@ -28,17 +28,16 @@ class AgentState(TypedDict):
     audit_report: str
 
 def node_analista(state: AgentState):
-    try:
+    try:  # <--- Aquí empieza el bloque de intento
         api_key = os.environ.get("GOOGLE_API_KEY")
         
-        # USAMOS EL MODELO QUE SÍ VEMOS EN TU LISTA
-       # Probamos con la versión LITE que tiene cuotas más amplias
-url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite-001:generateContent?key={api_key}"
+        # URL con el modelo Lite que confirmamos
+        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite-001:generateContent?key={api_key}"
         
         headers = {'Content-Type': 'application/json'}
         payload = {
             "contents": [{
-                "parts": [{"text": f"Eres un auditor experto en panaderías. Analiza estos datos y sugiere mejoras: {state['data_summary']}"}]
+                "parts": [{"text": f"Eres un auditor experto en panaderías. Analiza estos datos: {state['data_summary']}"}]
             }]
         }
         
@@ -51,9 +50,9 @@ url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lit
             msg = res_json.get('error', {}).get('message', 'Error desconocido')
             return {"audit_report": f"❌ Error ({response.status_code}): {msg}"}
             
-    except Exception as e:
+    except Exception as e:  # <--- ESTE es el bloque que faltaba o estaba mal puesto
         return {"audit_report": f"⚠️ Error crítico: {str(e)}"}
-
+        
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
     # Aquí llamas a tu función node_analista que ya tenías creada
