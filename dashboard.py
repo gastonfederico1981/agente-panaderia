@@ -106,15 +106,15 @@ elif menu == "📊 Auditoría Activa":
             st.session_state.all_summary += f"\nArchivo: {arc.name}\nVenta Total: ${venta:,.2f}\nDatos:\n{df.head(50).to_string()}"
             st.success(f"✅ {arc.name} procesado. Venta detectada: ${venta:,.2f}")
 
-        if st.button("🚀 GENERAR REPORTE CON IA"):
+    if st.button("🚀 GENERAR REPORTE CON IA"):
             config = {"configurable": {"thread_id": "demo_1"}}
-           if st.button("🚀 GENERAR REPORTE CON IA"):
+        if st.button("🚀 GENERAR REPORTE CON IA"):
             # En lugar de app_agente.invoke, llamamos directo a nuestra función
             res = ejecutar_agente({"data_summary": st.session_state.all_summary})
             st.session_state.reporte_actual = res["audit_report"]
 
     if st.session_state.reporte_actual:
-        st.markdown(st.session_state.reporte_actual)
+    st.markdown(st.session_state.reporte_actual)
         st.divider()
         c1, c2 = st.columns(2)
         with c1:
