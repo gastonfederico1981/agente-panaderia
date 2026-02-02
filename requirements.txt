@@ -1,7 +1,5 @@
 streamlit
 google-generativeai
-twilio
 pandas
-langgraph
-langchain-google-genai
 python-dotenv
+twilio
