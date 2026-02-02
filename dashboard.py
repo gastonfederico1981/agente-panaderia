@@ -35,19 +35,23 @@ class AgentState(TypedDict):
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
-        # Forzamos el endpoint estable v1
-        options = client_options.ClientOptions(api_endpoint="generativelanguage.googleapis.com")
-        genai.configure(api_key=llave, client_options=options)
+        genai.configure(api_key=llave)
         
-        model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
+        # Intentamos listar los modelos para ver qué hay disponible en este entorno
+        available_models = [m.name for m in genai.list_models()]
         
-        prompt = f"Analiza estos datos de panadería: {state['data_summary']}"
+        # Intentamos usar 'gemini-pro' que es el más antiguo y compatible
+        # Si 'gemini-1.5-flash' falla, este suele ser el salvavidas.
+        model_name = 'models/gemini-pro' 
+        model = genai.GenerativeModel(model_name)
+        
+        prompt = f"Analiza estos datos: {state['data_summary']}"
         response = model.generate_content(prompt)
         
         return {"audit_report": response.text}
     except Exception as e:
-        # Si falla, devolvemos el error pero permitimos que el flujo siga
-        return {"audit_report": f"⚠️ Nota: La IA está en mantenimiento. Detalle: {str(e)}"}
+        # Si vuelve a fallar, el error nos dirá qué modelos SÍ existen
+        return {"audit_report": f"❌ Error de Modelos. Disponibles: {str(available_models if 'available_models' in locals() else 'No lista')} - Error: {str(e)}"}
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
     # Aquí llamas a tu función node_analista que ya tenías creada
