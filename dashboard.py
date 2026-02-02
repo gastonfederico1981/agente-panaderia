@@ -93,7 +93,7 @@ elif menu == "📊 Auditoría Activa":
     st.header("🔍 Análisis de Datos en Tiempo Real")
     archivos = st.file_uploader("Subir reportes CSV", type=["csv"], accept_multiple_files=True)
 
-    if archivos and st.session_state.api_key_actual:
+    if archivos:
         st.session_state.all_summary = ""
         for arc in archivos:
             # Detectar codificación y separador automáticamente
