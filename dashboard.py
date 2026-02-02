@@ -38,18 +38,20 @@ from google.api_core import client_options
 import google.generativeai as genai
 import os
 
+import google.generativeai as genai
+import os
+
 def node_analista(state: AgentState):
     try:
-        # 1. Obtenemos la llave de Render
         llave = os.environ.get("GOOGLE_API_KEY")
+        
+        # FORZAMOS LA VERSIÓN V1 Y EL MODELO ESTABLE
         genai.configure(api_key=llave)
         
-        # 2. Usamos el nombre técnico completo del modelo
-        # Esto evita que la librería intente adivinar la versión
+        # Usar el prefijo 'models/' es el truco para saltar errores de versión
         model = genai.GenerativeModel(model_name='models/gemini-1.5-flash')
         
-        # 3. Llamada al modelo
-        prompt = f"Actúa como Auditor de L'Art du Data. Analiza: {state['data_summary']}"
+        prompt = f"Analiza estos datos de panadería: {state['data_summary']}"
         response = model.generate_content(prompt)
         
         return {"audit_report": response.text}
