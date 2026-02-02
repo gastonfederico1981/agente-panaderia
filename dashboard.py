@@ -11,11 +11,6 @@ load_dotenv()
 # Cambia esto al principio del dashboard.py
 api_key = os.environ.get("GOOGLE_API_KEY")
 
-if api_key:
-    genai.configure(api_key=api_key)
-else:
-    st.error("Falta la GOOGLE_API_KEY. Por favor, configúrala en Render.")
-
 # --- Tu lógica de la App de aquí en adelante ---
 st.title("🚀 SmartInsight AI")
 st.subheader("Análisis inteligente para tu negocio")
