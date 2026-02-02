@@ -31,31 +31,23 @@ SUCURSALES = ["Sucursal Central", "Sucursal Mercado", "Sucursal San Telmo", "Suc
 class AgentState(TypedDict):
     data_summary: str
     audit_report: str
-
-import google.generativeai as genai
-from google.api_core import client_options
-
-import google.generativeai as genai
-import os
-
-import google.generativeai as genai
-import os
-
-import google.generativeai as genai
-import os
-
+    
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
-        genai.configure(api_key=llave)
-        # Nombre limpio, sin prefijos, para que la versión 0.8.3 lo maneje
+        # Forzamos el endpoint estable v1
+        options = client_options.ClientOptions(api_endpoint="generativelanguage.googleapis.com")
+        genai.configure(api_key=llave, client_options=options)
+        
         model = genai.GenerativeModel('gemini-1.5-flash')
         
-        response = model.generate_content(f"Analiza: {state['data_summary']}")
+        prompt = f"Analiza estos datos de panadería: {state['data_summary']}"
+        response = model.generate_content(prompt)
+        
         return {"audit_report": response.text}
     except Exception as e:
-        return {"audit_report": f"❌ Error: {str(e)}"}
-
+        # Si falla, devolvemos el error pero permitimos que el flujo siga
+        return {"audit_report": f"⚠️ Nota: La IA está en mantenimiento. Detalle: {str(e)}"}
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
     # Aquí llamas a tu función node_analista que ya tenías creada
