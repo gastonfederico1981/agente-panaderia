@@ -32,11 +32,22 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
+        # Usamos la key que configuraste en el sidebar
         genai.configure(api_key=st.session_state.api_key_actual)
-        model = genai.GenerativeModel('gemini-pro')
+        
+        # Usamos 1.5-flash que es el estándar actual
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        
         prompt = f"Eres el Auditor Senior de L Art du Data. Analiza esto: {state['data_summary']}"
+        
+        # Generar contenido de forma simple
         response = model.generate_content(prompt)
-        return {"audit_report": response.text}
+        
+        if response.text:
+            return {"audit_report": response.text}
+        else:
+            return {"audit_report": "⚠️ La IA no devolvió texto. Revisa tu cuota de API."}
+            
     except Exception as e:
         return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
