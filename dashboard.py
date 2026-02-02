@@ -32,18 +32,17 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
-        # Usamos el modelo sin el prefijo 'models/' y sin versiones beta
-        # 'gemini-1.5-flash' es el nombre oficial para la API v1
+        # Forzamos el uso de la api_key que cargamos al principio del archivo
+        if not api_key:
+            return {"audit_report": "❌ Error: No se encontró la API Key en el sistema (Render)."}
+            
+        genai.configure(api_key=api_key)
         model = genai.GenerativeModel('gemini-1.5-flash')
         
-        prompt = f"Actúa como un Auditor Senior. Analiza estos datos de la sucursal: {state['data_summary']}"
-        
-        # Llamada directa
+        prompt = f"Eres el Auditor Senior de L Art du Data. Analiza esto: {state['data_summary']}"
         response = model.generate_content(prompt)
-        
         return {"audit_report": response.text}
     except Exception as e:
-        # Si falla, intentamos con el nombre alternativo que a veces requiere v1
         return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
@@ -63,14 +62,14 @@ if "historial" not in st.session_state:
     st.session_state.historial = []
 
 # --- BARRA LATERAL (MENÚ DE NAVEGACIÓN) ---
-with st.sidebar:
+wwith st.sidebar:
     st.markdown("## 🛡️ Panel de Control")
     menu = st.radio("Módulos:", ["🏠 Inicio", "📊 Auditoría Activa", "💬 Consultoría AI"])
     st.divider()
     st.session_state.sucursal_seleccionada = st.selectbox("Sucursal:", SUCURSALES)
-    st.session_state.api_key_actual = st.text_input("🔑 API Key", type="password")
+    # ELIMINAMOS LA LÍNEA DE API_KEY_ACTUAL
     st.caption("L'Art du Data v2.0 - 2026")
-
+    
 # --- MÓDULO 1: INICIO ---
 if menu == "🏠 Inicio":
     st.markdown('<p class="main-title">L\'Art du Data</p>', unsafe_allow_html=True)
