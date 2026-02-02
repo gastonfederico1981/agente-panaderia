@@ -2,5 +2,3 @@ google-generativeai==0.8.3
 streamlit
 pandas
 python-dotenv
-langgraph
-langchain-google-genai==2.0.9

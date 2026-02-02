@@ -31,7 +31,7 @@ SUCURSALES = ["Sucursal Central", "Sucursal Mercado", "Sucursal San Telmo", "Suc
 class AgentState(TypedDict):
     data_summary: str
     audit_report: str
-    
+
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
@@ -39,7 +39,7 @@ def node_analista(state: AgentState):
         options = client_options.ClientOptions(api_endpoint="generativelanguage.googleapis.com")
         genai.configure(api_key=llave, client_options=options)
         
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         
         prompt = f"Analiza estos datos de panadería: {state['data_summary']}"
         response = model.generate_content(prompt)
