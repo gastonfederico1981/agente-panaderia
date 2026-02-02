@@ -31,28 +31,27 @@ def node_analista(state: AgentState):
     try:
         api_key = os.environ.get("GOOGLE_API_KEY")
         
-        # Primero intentamos listar qué modelos existen para tu clave
-        list_url = f"https://generativelanguage.googleapis.com/v1/models?key={api_key}"
-        list_res = requests.get(list_url)
-        modelos_disponibles = [m['name'] for m in list_res.json().get('models', [])]
+        # USAMOS EL MODELO QUE SÍ VEMOS EN TU LISTA
+        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={api_key}"
         
-        # Ahora intentamos la llamada normal
-        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={api_key}"
-        
+        headers = {'Content-Type': 'application/json'}
         payload = {
-            "contents": [{"parts": [{"text": f"Analiza: {state['data_summary']}"}]}]
+            "contents": [{
+                "parts": [{"text": f"Eres un auditor experto en panaderías. Analiza estos datos y sugiere mejoras: {state['data_summary']}"}]
+            }]
         }
         
-        response = requests.post(url, headers={'Content-Type': 'application/json'}, data=json.dumps(payload))
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        res_json = response.json()
         
         if response.status_code == 200:
-            return {"audit_report": response.json()['candidates'][0]['content']['parts'][0]['text']}
+            return {"audit_report": res_json['candidates'][0]['content']['parts'][0]['text']}
         else:
-            # SI FALLA, TE MUESTRA LA LISTA DE MODELOS QUE SÍ PODÉS USAR
-            return {"audit_report": f"❌ Error 404. Modelos que tu cuenta SÍ ve: {modelos_disponibles}"}
+            msg = res_json.get('error', {}).get('message', 'Error desconocido')
+            return {"audit_report": f"❌ Error ({response.status_code}): {msg}"}
             
     except Exception as e:
-        return {"audit_report": f"⚠️ Error: {str(e)}"}
+        return {"audit_report": f"⚠️ Error crítico: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
