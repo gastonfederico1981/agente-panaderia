@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # Cargar variables de entorno (Localmente usa .env, en Render usa las de "Environment")
 load_dotenv()
 # Cambia esto al principio del dashboard.py
-api_key = os.getenv("LLAVE_MAESTRA")
+api_key = os.environ.get("GOOGLE_API_KEY")
 
 if api_key:
     genai.configure(api_key=api_key)
