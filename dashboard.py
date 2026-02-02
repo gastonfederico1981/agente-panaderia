@@ -4,6 +4,7 @@ import google.generativeai as genai
 import os
 from typing import TypedDict  # <--- AGREGÁ ESTA LÍNEA
 from dotenv import load_dotenv
+from google.api_core import client_options
 
 # Cargar variables de entorno (Localmente usa .env, en Render usa las de "Environment")
 load_dotenv()
@@ -31,32 +32,26 @@ class AgentState(TypedDict):
     data_summary: str
     audit_report: str
 
+import google.generativeai as genai
+from google.api_core import client_options
+
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
         
-        # 1. Configuración forzada
-        genai.configure(api_key=llave)
+        # FORZAMOS LA VERSIÓN V1 (ESTABLE) Y EL ENDPOINT CORRECTO
+        options = client_options.ClientOptions(api_endpoint="generativelanguage.googleapis.com")
+        genai.configure(api_key=llave, client_options=options)
         
-        # 2. Instanciamos el modelo usando el nombre más compatible
-        # A veces 'gemini-1.5-flash-latest' funciona mejor en entornos de nube
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        # USAMOS EL NOMBRE COMPLETO DEL MODELO
+        model = genai.GenerativeModel(model_name='models/gemini-1.5-flash')
         
-        prompt = f"Analiza estos datos de panadería y genera un reporte: {state['data_summary']}"
-        
-        # 3. Generación de contenido
+        prompt = f"Actúa como Auditor Senior de L'Art du Data. Analiza: {state['data_summary']}"
         response = model.generate_content(prompt)
         
         return {"audit_report": response.text}
-        
     except Exception as e:
-        # Si el error 404 persiste, intentamos con el modelo Pro como backup automático
-        try:
-            model_alt = genai.GenerativeModel('gemini-pro')
-            response = model_alt.generate_content(f"Analiza esto: {state['data_summary']}")
-            return {"audit_report": response.text}
-        except:
-            return {"audit_report": f"❌ Error de IA persistente: {str(e)}"}
+        return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
