@@ -41,22 +41,20 @@ import os
 import google.generativeai as genai
 import os
 
+import google.generativeai as genai
+import os
+
 def node_analista(state: AgentState):
     try:
         llave = os.environ.get("GOOGLE_API_KEY")
-        
-        # FORZAMOS LA VERSIÓN V1 Y EL MODELO ESTABLE
         genai.configure(api_key=llave)
+        # Nombre limpio, sin prefijos, para que la versión 0.8.3 lo maneje
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
-        # Usar el prefijo 'models/' es el truco para saltar errores de versión
-        model = genai.GenerativeModel(model_name='models/gemini-1.5-flash')
-        
-        prompt = f"Analiza estos datos de panadería: {state['data_summary']}"
-        response = model.generate_content(prompt)
-        
+        response = model.generate_content(f"Analiza: {state['data_summary']}")
         return {"audit_report": response.text}
     except Exception as e:
-        return {"audit_report": f"❌ Error de IA: {str(e)}"}
+        return {"audit_report": f"❌ Error: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
