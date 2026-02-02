@@ -4,6 +4,18 @@ from dotenv import load_dotenv
 from google import genai
 from twilio.rest import Client
 
+# 1. Borrá las claves viejas y poné esto:
+gemini_key = st.secrets["GEMINI_KEY"]
+twilio_sid = st.secrets["TWILIO_SID"]
+twilio_token = st.secrets["TWILIO_TOKEN"]
+twilio_from = st.secrets["TWILIO_FROM"]
+twilio_to = st.secrets["TWILIO_TO"]
+
+# 2. Después, fijate que en el resto de tu código uses estas variables.
+# Por ejemplo, si tenías:
+# genai.configure(api_key="AIza...") 
+# Cambialo por:
+# genai.configure(api_key=gemini_key)
 # 1. Cargar credenciales del archivo .env
 load_dotenv()
 
