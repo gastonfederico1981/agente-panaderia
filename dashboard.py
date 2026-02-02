@@ -6,13 +6,15 @@ from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 
 # --- CONFIGURACIÓN ESTÉTICA ---
-st.set_page_config(page_title="L'Art du Data | Business Intelligence", layout="wide")
-st.markdown("""
-    <style>
-    .stApp { background-color: #FDF5E6; }
-    .main-title { color: #4B2C20; font-size: 3rem; font-weight: bold; text-align: center; }
-    </style>
-""", unsafe_allow_html=True)
+
+st.set_page_config(
+    page_title="SmartInsight_Ia- Análisis Multirrubro", 
+    page_icon="📊", 
+    layout="wide"
+)
+
+st.title("📊 Panel de Inteligencia de Negocios")
+st.markdown("### Análisis de tickets y optimización de ventas mediante IA")
 
 # --- INICIALIZACIÓN DE ESTADOS ---
 if 'messages' not in st.session_state: st.session_state.messages = []
