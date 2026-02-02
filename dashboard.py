@@ -33,22 +33,21 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
-        # Intentamos obtener la clave de Render
-        llave_sistema = os.environ.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
+        llave = os.environ.get("GOOGLE_API_KEY")
+        # Forzamos la configuración limpia
+        genai.configure(api_key=llave)
         
-        if not llave_sistema:
-            return {"audit_report": "❌ Error: Render no entregó la clave al código. Revisa la pestaña Environment."}
+        # CAMBIO CLAVE: Usamos 'models/gemini-1.5-flash' (nombre completo)
+        model = genai.GenerativeModel(model_name='gemini-1.5-flash')
         
-        # Diagnóstico de seguridad (solo muestra los primeros 4 caracteres)
-        st.write(f"🔍 Diagnóstico: Usando clave que empieza con: {llave_sistema[:4]}...")
-
-        genai.configure(api_key=llave_sistema)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        prompt = f"Actúa como un Auditor Senior. Analiza estos datos: {state['data_summary']}"
         
-        response = model.generate_content(f"Analiza esto brevemente: {state['data_summary']}")
+        # Llamada directa
+        response = model.generate_content(prompt)
+        
         return {"audit_report": response.text}
-        
     except Exception as e:
+        # Si falla, que nos diga exactamente qué pasó
         return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
