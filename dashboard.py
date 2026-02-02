@@ -108,7 +108,9 @@ elif menu == "📊 Auditoría Activa":
 
         if st.button("🚀 GENERAR REPORTE CON IA"):
             config = {"configurable": {"thread_id": "demo_1"}}
-            res = app_agente.invoke({"data_summary": st.session_state.all_summary}, config)
+           if st.button("🚀 GENERAR REPORTE CON IA"):
+            # En lugar de app_agente.invoke, llamamos directo a nuestra función
+            res = ejecutar_agente({"data_summary": st.session_state.all_summary})
             st.session_state.reporte_actual = res["audit_report"]
 
     if st.session_state.reporte_actual:
@@ -138,6 +140,10 @@ elif menu == "💬 Consultoría AI":
         with st.chat_message("assistant"):
             config = {"configurable": {"thread_id": "demo_1"}}
             ctx = f"DATOS: {st.session_state.all_summary}\nPREGUNTA: {p}"
-            r = app_agente.invoke({"data_summary": ctx}, config)
+           with st.chat_message("assistant"):
+            ctx = f"DATOS: {st.session_state.all_summary}\nPREGUNTA: {p}"
+            # Llamamos directo a la función de nuevo
+            r = ejecutar_agente({"data_summary": ctx})
             st.markdown(r["audit_report"])
             st.session_state.messages.append({"role": "assistant", "content": r["audit_report"]})
+            
