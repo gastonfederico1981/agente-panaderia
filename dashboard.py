@@ -134,20 +134,25 @@ elif menu == "💬 Consultoría AI":
     st.header("🤖 Consultor Inteligente")
     st.caption("Haz preguntas específicas sobre los archivos cargados anteriormente.")
     
+    # Mostrar historial de chat
     for m in st.session_state.messages:
-        with st.chat_message(m["role"]): st.markdown(m["content"])
+        with st.chat_message(m["role"]): 
+            st.markdown(m["content"])
 
+    # Entrada del chat
     if p := st.chat_input("¿Qué quieres saber sobre los datos?"):
         st.session_state.messages.append({"role": "user", "content": p})
-        with st.chat_message("user"): st.markdown(p)
+        with st.chat_message("user"): 
+            st.markdown(p)
         
         with st.chat_message("assistant"):
-            config = {"configurable": {"thread_id": "demo_1"}}
-            ctx = f"DATOS: {st.session_state.all_summary}\nPREGUNTA: {p}"
-           with st.chat_message("assistant"):
-            ctx = f"DATOS: {st.session_state.all_summary}\nPREGUNTA: {p}"
-            # Llamamos directo a la función de nuevo
-            r = ejecutar_agente({"data_summary": ctx})
-            st.markdown(r["audit_report"])
-            st.session_state.messages.append({"role": "assistant", "content": r["audit_report"]})
+            # Usamos el contexto de los datos cargados + la pregunta
+            ctx = f"DATOS CARGADOS: {st.session_state.all_summary}\n\nPREGUNTA DEL USUARIO: {p}"
             
+            # Llamamos a nuestra función liviana
+            with st.spinner("Pensando..."):
+                r = ejecutar_agente({"data_summary": ctx})
+                respuesta_texto = r["audit_report"]
+                
+            st.markdown(respuesta_texto)
+            st.session_state.messages.append({"role": "assistant", "content": respuesta_texto})
