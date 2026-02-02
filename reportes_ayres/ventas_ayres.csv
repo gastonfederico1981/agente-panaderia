@@ -1,0 +1,6 @@
+Fecha;Producto;Cantidad_Vendida;Precio_Venta;Descuento;Tipo_Baja
+29/01/2026;Medialuna Manteca;410;450;0;Venta
+29/01/2026;Pan Felipe (kg);115;1800;0;Venta
+29/01/2026;Prepizzas;75;1500;0;Venta
+29/01/2026;Facturas Varias;260;500;0;Venta
+29/01/2026;Medialuna Manteca;5;0;100;Desperdicio_Marcado

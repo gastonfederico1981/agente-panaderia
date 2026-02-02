@@ -1,0 +1,292 @@
+sucursal	articulo	cantidad	precio promedio	total
+Callao	Pan suizo J & Q                                                                                                         	14	$  5.800,0	$  81.200,0
+Madero	Pan suizo J & Q                                                                                                         	13	$  6.000,0	$  78.000,0
+Petrona	Pan suizo J & Q                                                                                                         	7	$  6.000,0	$  42.000,0
+San Telmo	Pan suizo J & Q                                                                                                         	9	$  5.800,0	$  52.200,0
+Callao	Pan suizo ROQUEFORT                                                                                                     	13	$  5.900,0	$  76.700,0
+Madero	Pan suizo ROQUEFORT                                                                                                     	6	$  6.200,0	$  37.200,0
+Petrona	Pan suizo ROQUEFORT                                                                                                     	5	$  6.200,0	$  31.000,0
+San Telmo	Pan suizo ROQUEFORT                                                                                                     	19	$  5.900,0	$  112.100,0
+Callao	Baguette ojo de bife                                                                                                    	1	$  17.900,0	$  17.900,0
+Madero	Baguette ojo de bife                                                                                                    	8	$  22.000,0	$  176.000,0
+Petrona	Baguette ojo de bife                                                                                                    	2	$  22.000,0	$  44.000,0
+San Telmo	Baguette ojo de bife                                                                                                    	7	$  17.900,0	$  125.300,0
+Madero	CROISSANT CON JAMON Y QUESO 	36	$  9.966,6667	$  358.800,0
+Petrona	CROISSANT CON JAMON Y QUESO 	25	$  10.364,0	$  259.100,0
+San Telmo	CROISSANT CON JAMON Y QUESO 	2	$  10.900,0	$  21.800,0
+Callao	CROISSANT IBERICO	3	$  16.000,0	$  48.000,0
+Madero	CROISSANT IBERICO	4	$  16.900,0	$  67.600,0
+Petrona	CROISSANT IBERICO	2	$  16.900,0	$  33.800,0
+Callao	CROQUE MONSIEUR	3	$  16.000,0	$  48.000,0
+Madero	CROQUE MONSIEUR	1	$  16.900,0	$  16.900,0
+Petrona	CROQUE MONSIEUR	4	$  16.900,0	$  67.600,0
+San Telmo	CROQUE MONSIEUR	4	$  16.000,0	$  64.000,0
+Callao	empanada bourguinon	1	$  5.000,0	$  5.000,0
+Madero	empanada bourguinon	1	$  6.000,0	$  6.000,0
+San Telmo	empanada bourguinon	2	$  5.000,0	$  10.000,0
+Callao	LE CROISSANT	3	$  14.000,0	$  42.000,0
+Madero	LE CROISSANT	2	$  14.900,0	$  29.800,0
+San Telmo	LE CROISSANT	6	$  14.000,0	$  84.000,0
+Callao	bag vianeza pollo                                                                                                       	1	$  12.500,0	$  12.500,0
+Madero	bag vianeza pollo                                                                                                       	4	$  14.900,0	$  59.600,0
+Petrona	bag vianeza pollo                                                                                                       	13	$  14.900,0	$  193.700,0
+San Telmo	bag vianeza pollo                                                                                                       	2	$  12.500,0	$  25.000,0
+Callao	BAGUETIN NORDICO                                                                                                        	5	$  15.900,0	$  79.500,0
+Madero	BAGUETIN NORDICO                                                                                                        	10	$  17.900,0	$  179.000,0
+Petrona	BAGUETIN NORDICO                                                                                                        	1	$  17.900,0	$  17.900,0
+San Telmo	BAGUETIN NORDICO                                                                                                        	5	$  15.900,0	$  79.500,0
+Callao	Croissant  Madame                                                                                                      	15	$  10.500,0	$  157.500,0
+Madero	Croissant  Madame                                                                                                      	27	$  10.900,0	$  294.300,0
+Petrona	Croissant  Madame                                                                                                      	38	$  10.900,0	$  414.200,0
+San Telmo	Croissant  Madame                                                                                                      	13	$  10.500,0	$  136.500,0
+Callao	CROISSANT BRIE                                                                                                          	14	$  9.500,0	$  133.000,0
+Madero	CROISSANT BRIE                                                                                                          	14	$  9.900,0	$  138.600,0
+Petrona	CROISSANT BRIE                                                                                                          	14	$  9.900,0	$  138.600,0
+San Telmo	CROISSANT BRIE                                                                                                          	33	$  9.500,0	$  313.500,0
+Callao	CROISSANT FRANCO INGLES                            	16	$  10.062,50	$  161.000,0
+Madero	CROISSANT FRANCO INGLES                            	25	$  10.900,0	$  272.500,0
+Petrona	CROISSANT FRANCO INGLES                            	22	$  10.581,8182	$  232.800,0
+San Telmo	CROISSANT FRANCO INGLES                            	29	$  9.810,3448	$  284.500,0
+Callao	CROISSANT MONSIEUR                                                                  	11	$  9.900,0	$  108.900,0
+Madero	CROISSANT MONSIEUR                                                                  	16	$  9.900,0	$  158.400,0
+Petrona	CROISSANT MONSIEUR                                                                  	3	$  9.900,0	$  29.700,0
+San Telmo	CROISSANT MONSIEUR                                                                  	20	$  9.900,0	$  198.000,0
+Callao	MEDITERRANÉE CROISSANT (QUESO, HUEVOY TOMATE)                                                                           	9	$  8.900,0	$  80.100,0
+Madero	MEDITERRANÉE CROISSANT (QUESO, HUEVOY TOMATE)                                                                           	9	$  9.500,0	$  85.500,0
+Petrona	MEDITERRANÉE CROISSANT (QUESO, HUEVOY TOMATE)                                                                           	14	$  9.500,0	$  133.000,0
+San Telmo	MEDITERRANÉE CROISSANT (QUESO, HUEVOY TOMATE)                                                                           	4	$  8.900,0	$  35.600,0
+Callao	PALTA CROISSANT                                                                                                         	26	$  12.900,0	$  335.400,0
+Madero	PALTA CROISSANT                                                                                                         	58	$  13.500,0	$  783.000,0
+Petrona	PALTA CROISSANT                                                                                                         	39	$  13.500,0	$  526.500,0
+San Telmo	PALTA CROISSANT                                                                                                         	31	$  12.900,0	$  399.900,0
+Callao	2 MEDIALUNAS CON JAMON Y QUESO	12	$  9.066,6667	$  108.800,0
+Madero	2 MEDIALUNAS CON JAMON Y QUESO	33	$  9.645,4545	$  318.300,0
+Petrona	2 MEDIALUNAS CON JAMON Y QUESO	25	$  10.268,0	$  256.700,0
+San Telmo	2 MEDIALUNAS CON JAMON Y QUESO	22	$  8.900,0	$  195.800,0
+Callao	2x1	40	-$  4.013,750	-$  160.550,0
+Madero	2x1	1	-$  2.400,0	-$  2.400,0
+Petrona	2x1	40	-$  5.240,0	-$  209.600,0
+San Telmo	2x1	40	-$  4.681,250	-$  187.250,0
+Callao	Bondiola  empanadas                                                                                                     	6	$  3.500,0	$  21.000,0
+Madero	Bondiola  empanadas                                                                                                     	28	$  3.900,0	$  109.200,0
+Petrona	Bondiola  empanadas                                                                                                     	8	$  3.900,0	$  31.200,0
+San Telmo	Bondiola  empanadas                                                                                                     	17	$  3.500,0	$  59.500,0
+Callao	empanada blanquette                                                                                                             	8	$  3.500,0	$  28.000,0
+Madero	empanada blanquette                                                                                                             	21	$  3.900,0	$  81.900,0
+Petrona	empanada blanquette                                                                                                             	7	$  3.900,0	$  27.300,0
+San Telmo	empanada blanquette                                                                                                             	11	$  3.500,0	$  38.500,0
+Callao	empanadas bourguignon                                                                                                   	17	$  3.500,0	$  59.500,0
+Madero	empanadas bourguignon                                                                                                   	42	$  3.900,0	$  163.800,0
+Petrona	empanadas bourguignon                                                                                                   	13	$  3.900,0	$  50.700,0
+San Telmo	empanadas bourguignon                                                                                                   	34	$  3.500,0	$  119.000,0
+Callao	empanadas parisien                                                                                         	12	$  3.500,0	$  42.000,0
+Madero	empanadas parisien                                                                                         	7	$  3.900,0	$  27.300,0
+Petrona	empanadas parisien                                                                                         	6	$  3.900,0	$  23.400,0
+San Telmo	empanadas parisien                                                                                         	9	$  3.500,0	$  31.500,0
+Callao	empanadas ratatouille                                                                                                   	3	$  3.500,0	$  10.500,0
+Madero	empanadas ratatouille                                                                                                   	14	$  3.900,0	$  54.600,0
+Petrona	empanadas ratatouille                                                                                                   	4	$  3.900,0	$  15.600,0
+San Telmo	empanadas ratatouille                                                                                                   	11	$  3.500,0	$  38.500,0
+Callao	PROMO BONJOUR CROISSANT	63	$  7.544,4444	$  475.300,0
+Madero	PROMO BONJOUR CROISSANT	59	$  8.584,7458	$  506.500,0
+Petrona	PROMO BONJOUR CROISSANT	63	$  8.579,3651	$  540.500,0
+San Telmo	PROMO BONJOUR CROISSANT	73	$  7.593,1507	$  554.300,0
+Madero	PROMO BONJOUR CROISSANT X 2	1	$  17.900,0	$  17.900,0
+Petrona	PROMO BONJOUR CROISSANT X 2	1	$  17.900,0	$  17.900,0
+San Telmo	PROMO BONJOUR CROISSANT X 2	5	$  15.500,0	$  77.500,0
+Callao	PROMO BONJOUR MEDIALUNAS	190	$  7.546,3158	$  1.433.800,0
+Madero	PROMO BONJOUR MEDIALUNAS	215	$  8.644,1860	$  1.858.500,0
+Petrona	PROMO BONJOUR MEDIALUNAS	188	$  8.627,6596	$  1.622.000,0
+San Telmo	PROMO BONJOUR MEDIALUNAS	147	$  7.535,3741	$  1.107.700,0
+Callao	PROMO BONJOUR MEDIALUNAS X 2	2	$  15.500,0	$  31.000,0
+Madero	PROMO BONJOUR MEDIALUNAS X 2	4	$  17.900,0	$  71.600,0
+Petrona	PROMO BONJOUR MEDIALUNAS X 2	3	$  17.900,0	$  53.700,0
+San Telmo	PROMO BONJOUR MEDIALUNAS X 2	5	$  15.500,0	$  77.500,0
+Callao	Ciabatta                                                                                                                	29	$  2.500,0	$  72.500,0
+Madero	Ciabatta                                                                                                                	5	$  2.600,0	$  13.000,0
+Petrona	Ciabatta                                                                                                                	16	$  2.600,0	$  41.600,0
+San Telmo	Ciabatta                                                                                                                	16	$  2.500,0	$  40.000,0
+Callao	INTEGRAL 1KG                                                                                                            	46	$  6.900,0	$  317.400,0
+Madero	INTEGRAL 1KG                                                                                                            	83	$  6.900,0	$  572.700,0
+Petrona	INTEGRAL 1KG                                                                                                            	49	$  6.900,0	$  338.100,0
+San Telmo	INTEGRAL 1KG                                                                                                            	75	$  6.900,0	$  517.500,0
+Callao	INTEGRAL 500GR                                                                                                          	18	$  5.400,0	$  97.200,0
+Madero	INTEGRAL 500GR                                                                                                          	19	$  5.400,0	$  102.600,0
+Petrona	INTEGRAL 500GR                                                                                                          	12	$  5.400,0	$  64.800,0
+San Telmo	INTEGRAL 500GR                                                                                                          	26	$  5.400,0	$  140.400,0
+Callao	PAN LACTAL 1 K                                                                                                          	1	$  7.500,0	$  7.500,0
+San Telmo	PAN LACTAL 1 K                                                                                                          	9	$  7.500,0	$  67.500,0
+Callao	PAN LACTAL DE SEMILLAS 1 K                                                                                              	1	$  9.800,0	$  9.800,0
+San Telmo	PAN LACTAL DE SEMILLAS 1 K                                                                                              	11	$  9.800,0	$  107.800,0
+Callao	pan vianez baguetin                                                                                                     	14	$  3.500,0	$  49.000,0
+Petrona	pan vianez baguetin                                                                                                     	6	$  3.600,0	$  21.600,0
+San Telmo	pan vianez baguetin                                                                                                     	1	$  3.500,0	$  3.500,0
+Callao	SEMILLAS 500GR                                                                                                          	22	$  5.900,0	$  129.800,0
+Madero	SEMILLAS 500GR                                                                                                          	20	$  5.900,0	$  118.000,0
+Petrona	SEMILLAS 500GR                                                                                                          	10	$  5.900,0	$  59.000,0
+San Telmo	SEMILLAS 500GR                                                                                                          	21	$  5.900,0	$  123.900,0
+Callao	SEMILLAS BAGUETTE 330G                                                                                                  	11	$  3.500,0	$  38.500,0
+Madero	SEMILLAS BAGUETTE 330G                                                                                                  	6	$  3.600,0	$  21.600,0
+Petrona	SEMILLAS BAGUETTE 330G                                                                                                  	9	$  3.600,0	$  32.400,0
+San Telmo	SEMILLAS BAGUETTE 330G                                                                                                  	18	$  3.500,0	$  63.000,0
+Madero	TRADICION BAGUETTE 165 GR                                                                                               	1	$  2.050,0	$  2.050,0
+Petrona	TRADICION BAGUETTE 165 GR                                                                                               	1	$  2.050,0	$  2.050,0
+Callao	TRADITION 1KG                                                                                                           	66	$  6.400,0	$  422.400,0
+Madero	TRADITION 1KG                                                                                                           	67	$  6.500,0	$  435.500,0
+Petrona	TRADITION 1KG                                                                                                           	35	$  6.500,0	$  227.500,0
+San Telmo	TRADITION 1KG                                                                                                           	85	$  6.400,0	$  544.000,0
+Callao	TRADITION 500GR                                                                                                         	16	$  4.900,0	$  78.400,0
+Madero	TRADITION 500GR                                                                                                         	20	$  4.900,0	$  98.000,0
+Petrona	TRADITION 500GR                                                                                                         	13	$  4.900,0	$  63.700,0
+San Telmo	TRADITION 500GR                                                                                                         	26	$  4.900,0	$  127.400,0
+Callao	TRADITION BAGUETTE 330G                                                                                                 	29	$  3.000,0	$  87.000,0
+Madero	TRADITION BAGUETTE 330G                                                                                                 	34	$  3.300,0	$  112.200,0
+Petrona	TRADITION BAGUETTE 330G                                                                                                 	19	$  3.300,0	$  62.700,0
+San Telmo	TRADITION BAGUETTE 330G                                                                                                 	34	$  3.000,0	$  102.000,0
+Callao	Gougere                                                                                                                 	23	$  3.900,0	$  89.700,0
+Madero	Gougere                                                                                                                 	43	$  4.100,0	$  176.300,0
+Petrona	Gougere                                                                                                                 	43	$  4.100,0	$  176.300,0
+San Telmo	Gougere                                                                                                                 	30	$  3.900,0	$  117.000,0
+Callao	PALITO PARMIGIANO                                               	17	$  5.488,2353	$  93.300,0
+Madero	PALITO PARMIGIANO                                               	22	$  5.627,2727	$  123.800,0
+Petrona	PALITO PARMIGIANO                                               	9	$  5.600,0	$  50.400,0
+San Telmo	PALITO PARMIGIANO                                               	15	$  5.433,3333	$  81.500,0
+Callao	BROWNIE CHOCOLATE Y NUECES                                                                                              	1	$  5.900,0	$  5.900,0
+Madero	BROWNIE CHOCOLATE Y NUECES                                                                                              	5	$  5.900,0	$  29.500,0
+Petrona	BROWNIE CHOCOLATE Y NUECES                                                                                              	2	$  5.900,0	$  11.800,0
+San Telmo	BROWNIE CHOCOLATE Y NUECES                                                                                              	4	$  5.900,0	$  23.600,0
+Callao	CANNELE                                                                                                                 	28	$  3.985,7143	$  111.600,0
+Madero	CANNELE                                                                                                                 	33	$  4.090,9091	$  135.000,0
+Petrona	CANNELE                                                                                                                 	23	$  4.086,9565	$  94.000,0
+San Telmo	CANNELE                                                                                                                 	30	$  4.000,0	$  120.000,0
+Callao	CARROT CAKE  SIN TACC                                                                                            	9	$  7.122,2222	$  64.100,0
+Madero	CARROT CAKE  SIN TACC                                                                                            	28	$  7.964,2857	$  223.000,0
+Petrona	CARROT CAKE  SIN TACC                                                                                            	15	$  7.900,0	$  118.500,0
+San Telmo	CARROT CAKE  SIN TACC                                                                                            	16	$  7.087,50	$  113.400,0
+Callao	CHEESE CAKE  SIN TACC                                                                                                	2	$  6.900,0	$  13.800,0
+Madero	CHEESE CAKE  SIN TACC                                                                                                	3	$  7.900,0	$  23.700,0
+Petrona	CHEESE CAKE  SIN TACC                                                                                                	1	$  7.900,0	$  7.900,0
+San Telmo	CHEESE CAKE  SIN TACC                                                                                                	2	$  6.900,0	$  13.800,0
+Callao	CHEESE CAKE Maracuya                                                                                                    	7	$  7.071,4286	$  49.500,0
+Madero	CHEESE CAKE Maracuya                                                                                                    	20	$  8.050,0	$  161.000,0
+Petrona	CHEESE CAKE Maracuya                                                                                                    	18	$  7.966,6667	$  143.400,0
+San Telmo	CHEESE CAKE Maracuya                                                                                                    	17	$  6.900,0	$  117.300,0
+Callao	CHIPA DE QUESO ( SIN TACC)	1	$  3.900,0	$  3.900,0
+Madero	CHIPA DE QUESO ( SIN TACC)	1	$  4.200,0	$  4.200,0
+San Telmo	CHIPA DE QUESO ( SIN TACC)	2	$  3.900,0	$  7.800,0
+Callao	COOKIE                                                                                                                  	15	$  4.340,0	$  65.100,0
+Madero	COOKIE                                                                                                                  	35	$  6.500,0	$  227.500,0
+Petrona	COOKIE                                                                                                                  	37	$  6.500,0	$  240.500,0
+San Telmo	COOKIE                                                                                                                  	29	$  4.272,4138	$  123.900,0
+Callao	CRUMBLE DE MANZANA                                                                                                    	11	$  7.009,0909	$  77.100,0
+Madero	CRUMBLE DE MANZANA                                                                                                    	32	$  8.050,0	$  257.600,0
+Petrona	CRUMBLE DE MANZANA                                                                                                    	19	$  7.994,7368	$  151.900,0
+San Telmo	CRUMBLE DE MANZANA                                                                                                    	15	$  7.020,0	$  105.300,0
+Callao	ECLAIR DE CHOCOLATE                                                                                                     	12	$  6.400,0	$  76.800,0
+Madero	ECLAIR DE CHOCOLATE                                                                                                     	35	$  6.934,2857	$  242.700,0
+Petrona	ECLAIR DE CHOCOLATE                                                                                                     	18	$  6.950,0	$  125.100,0
+San Telmo	ECLAIR DE CHOCOLATE                                                                                                     	19	$  6.478,9474	$  123.100,0
+Callao	ECLAIR DE DDL PARIS- BUENOS AIRES                                                              	2	$  6.200,0	$  12.400,0
+Madero	ECLAIR DE DDL PARIS- BUENOS AIRES                                                              	11	$  6.354,5455	$  69.900,0
+Petrona	ECLAIR DE DDL PARIS- BUENOS AIRES                                                              	14	$  6.342,8571	$  88.800,0
+San Telmo	ECLAIR DE DDL PARIS- BUENOS AIRES                                                              	9	$  6.033,3333	$  54.300,0
+Callao	ECLAIR DE PISTACHO                                                                                                      	13	$  6.992,3077	$  90.900,0
+Madero	ECLAIR DE PISTACHO                                                                                                      	29	$  7.534,4828	$  218.500,0
+Petrona	ECLAIR DE PISTACHO                                                                                                      	17	$  7.529,4118	$  128.000,0
+San Telmo	ECLAIR DE PISTACHO                                                                                                      	23	$  6.952,1739	$  159.900,0
+Callao	LEMON PIE INDIVIDUAL                                                                                                    	11	$  6.954,5455	$  76.500,0
+Madero	LEMON PIE INDIVIDUAL                                                                                                    	37	$  8.013,5135	$  296.500,0
+Petrona	LEMON PIE INDIVIDUAL                                                                                                    	23	$  7.952,1739	$  182.900,0
+San Telmo	LEMON PIE INDIVIDUAL                                                                                                    	22	$  6.954,5455	$  153.000,0
+Madero	Marquise ch sinTACC                                                                                                     	16	$  7.900,0	$  126.400,0
+Petrona	Marquise ch sinTACC                                                                                                     	5	$  7.900,0	$  39.500,0
+San Telmo	Marquise ch sinTACC                                                                                                     	7	$  6.900,0	$  48.300,0
+Callao	PAN DULCE 500G	3	$  24.000,0	$  72.000,0
+Madero	PAN DULCE 500G	2	$  30.000,0	$  60.000,0
+Petrona	PAN DULCE 500G	1	$  30.000,0	$  30.000,0
+San Telmo	PAN DULCE 500G	4	$  24.000,0	$  96.000,0
+Callao	PARIS BREST                                                                                                             	4	$  6.900,0	$  27.600,0
+Madero	PARIS BREST                                                                                                             	9	$  7.200,0	$  64.800,0
+San Telmo	PARIS BREST                                                                                                             	9	$  6.900,0	$  62.100,0
+Callao	PAVLOVA  FRUTAL 	1	$  29.000,0	$  29.000,0
+Petrona	PAVLOVA  FRUTAL 	1	$  30.000,0	$  30.000,0
+Callao	cookie pistacho                                                                                                         	7	$  4.700,0	$  32.900,0
+Madero	cookie pistacho                                                                                                         	14	$  6.900,0	$  96.600,0
+Petrona	cookie pistacho                                                                                                         	10	$  6.900,0	$  69.000,0
+San Telmo	cookie pistacho                                                                                                         	19	$  4.868,4211	$  92.500,0
+Callao	cookie vegano                                                                                                           	1	$  4.200,0	$  4.200,0
+Madero	cookie vegano                                                                                                           	1	$  4.400,0	$  4.400,0
+Petrona	cookie vegano                                                                                                           	6	$  4.400,0	$  26.400,0
+Callao	CROISSANT                                                                                                               	156	$  3.652,5641	$  569.800,0
+Madero	CROISSANT                                                                                                               	247	$  3.727,5304	$  920.700,0
+Petrona	CROISSANT                                                                                                               	100	$  3.753,0	$  375.300,0
+San Telmo	CROISSANT                                                                                                               	171	$  3.630,9942	$  620.900,0
+Callao	croissant DDL                                                                                                           	21	$  4.800,0	$  100.800,0
+Madero	croissant DDL                                                                                                           	46	$  5.500,0	$  253.000,0
+Petrona	croissant DDL                                                                                                           	20	$  5.500,0	$  110.000,0
+San Telmo	croissant DDL                                                                                                           	40	$  4.800,0	$  192.000,0
+Callao	CROISSANT DE ALMENDRAS                                                                                                  	52	$  5.448,0769	$  283.300,0
+Madero	CROISSANT DE ALMENDRAS                                                                                                  	80	$  5.933,750	$  474.700,0
+Petrona	CROISSANT DE ALMENDRAS                                                                                                  	62	$  5.948,3871	$  368.800,0
+San Telmo	CROISSANT DE ALMENDRAS                                                                                                  	63	$  5.487,3016	$  345.700,0
+Callao	CROISSANT DE PISTACHOS                                                                                                  	54	$  6.011,1111	$  324.600,0
+Madero	CROISSANT DE PISTACHOS                                                                                                  	70	$  6.560,0	$  459.200,0
+Petrona	CROISSANT DE PISTACHOS                                                                                                  	49	$  6.614,2857	$  324.100,0
+San Telmo	CROISSANT DE PISTACHOS                                                                                                  	74	$  6.062,1622	$  448.600,0
+Callao	croissant frutos rojos                                                                                                  	12	$  5.400,0	$  64.800,0
+Madero	croissant frutos rojos                                                                                                  	12	$  5.600,0	$  67.200,0
+Petrona	croissant frutos rojos                                                                                                  	5	$  5.600,0	$  28.000,0
+San Telmo	croissant frutos rojos                                                                                                  	8	$  5.400,0	$  43.200,0
+Callao	Croissant nutela                                                                                                       	49	$  5.553,0612	$  272.100,0
+Madero	Croissant nutela                                                                                                       	77	$  6.068,8312	$  467.300,0
+Petrona	Croissant nutela                                                                                                       	47	$  6.065,9574	$  285.100,0
+San Telmo	Croissant nutela                                                                                                       	90	$  5.566,6667	$  501.000,0
+Callao	croissant Pastelera                                                                                                     	21	$  4.800,0	$  100.800,0
+Madero	croissant Pastelera                                                                                                     	75	$  5.500,0	$  412.500,0
+Petrona	croissant Pastelera                                                                                                     	30	$  5.500,0	$  165.000,0
+San Telmo	croissant Pastelera                                                                                                     	64	$  4.800,0	$  307.200,0
+Callao	Danesa                                                                                                                  	17	$  5.488,2353	$  93.300,0
+Madero	Danesa                                                                                                                  	23	$  5.739,1304	$  132.000,0
+Petrona	Danesa                                                                                                                  	12	$  5.625,0	$  67.500,0
+San Telmo	Danesa                                                                                                                  	27	$  5.492,5926	$  148.300,0
+Callao	KOUIGN AMANN                                                                                                            	8	$  3.900,0	$  31.200,0
+Madero	KOUIGN AMANN                                                                                                            	22	$  3.927,2727	$  86.400,0
+Petrona	KOUIGN AMANN                                                                                                            	13	$  3.992,3077	$  51.900,0
+San Telmo	KOUIGN AMANN                                                                                                            	17	$  3.935,2941	$  66.900,0
+Callao	lemon croissant                                                                                                         	8	$  5.400,0	$  43.200,0
+Madero	lemon croissant                                                                                                         	7	$  5.600,0	$  39.200,0
+San Telmo	lemon croissant                                                                                                         	7	$  5.400,0	$  37.800,0
+Callao	medialuna grasa                                                                                                        	100	$  2.133,0	$  213.300,0
+Madero	medialuna grasa                                                                                                        	190	$  2.434,7368	$  462.600,0
+Petrona	medialuna grasa                                                                                                        	109	$  2.446,7890	$  266.700,0
+San Telmo	medialuna grasa                                                                                                        	106	$  2.128,3019	$  225.600,0
+Callao	medialuna manteca                                                                                                             	658	$  2.137,3860	$  1.406.400,0
+Madero	medialuna manteca                                                                                                             	798	$  2.442,1053	$  1.948.800,0
+Petrona	medialuna manteca                                                                                                             	444	$  2.425,0	$  1.076.700,0
+San Telmo	medialuna manteca                                                                                                             	435	$  2.137,2414	$  929.700,0
+Callao	moño de frutos rojos                                                                                                    	58	$  5.451,7241	$  316.200,0
+Madero	moño de frutos rojos                                                                                                    	65	$  5.950,7692	$  386.800,0
+Petrona	moño de frutos rojos                                                                                                    	27	$  5.922,2222	$  159.900,0
+San Telmo	moño de frutos rojos                                                                                                    	73	$  5.461,6438	$  398.700,0
+Callao	PAN DE CHOCOLATE                                                                                                        	59	$  5.400,0	$  318.600,0
+Madero	PAN DE CHOCOLATE                                                                                                        	65	$  5.584,6154	$  363.000,0
+Petrona	PAN DE CHOCOLATE                                                                                                        	59	$  5.508,4746	$  325.000,0
+San Telmo	PAN DE CHOCOLATE                                                                                                        	78	$  5.400,0	$  421.200,0
+Callao	PAN DE CHOCOLATE & ALMENDRAS                                                                                            	3	$  5.900,0	$  17.700,0
+Madero	PAN DE CHOCOLATE & ALMENDRAS                                                                                            	3	$  6.100,0	$  18.300,0
+Petrona	PAN DE CHOCOLATE & ALMENDRAS                                                                                            	1	$  6.100,0	$  6.100,0
+San Telmo	PAN DE CHOCOLATE & ALMENDRAS                                                                                            	5	$  5.900,0	$  29.500,0
+Callao	pan suizo                                                                                                               	15	$  5.400,0	$  81.000,0
+Madero	pan suizo                                                                                                               	22	$  5.940,9091	$  130.700,0
+Petrona	pan suizo                                                                                                               	38	$  5.923,6842	$  225.100,0
+San Telmo	pan suizo                                                                                                               	30	$  5.500,0	$  165.000,0
+Callao	ROLL DE CANELA                                                                                                          	43	$  4.941,8605	$  212.500,0
+Madero	ROLL DE CANELA                                                                                                          	39	$  5.053,8462	$  197.100,0
+Petrona	ROLL DE CANELA                                                                                                          	23	$  5.030,4348	$  115.700,0
+San Telmo	ROLL DE CANELA                                                                                                          	48	$  5.012,50	$  240.600,0
+Callao	ROLL QUESO AZUL Y NUEZ	2	$  6.500,0	$  13.000,0
+San Telmo	ROLL QUESO AZUL Y NUEZ	1	$  6.500,0	$  6.500,0
+Callao	Scon de queso                                                                                                           	28	$  4.185,7143	$  117.200,0
+Madero	Scon de queso                                                                                                           	39	$  4.315,3846	$  168.300,0
+Petrona	Scon de queso                                                                                                           	46	$  4.419,5652	$  203.300,0
+San Telmo	Scon de queso                                                                                                           	32	$  4.087,50	$  130.800,0

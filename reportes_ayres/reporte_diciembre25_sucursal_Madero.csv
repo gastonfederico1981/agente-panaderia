@@ -1,0 +1,73 @@
+sucursal;articulo;cantidad;precio promedio;total
+Madero;Pan suizo J & Q                                                                                                         ;13;6000;78000
+Madero;Pan suizo ROQUEFORT                                                                                                     ;6;6200;37200
+Madero;Baguette ojo de bife                                                                                                    ;8;22000;176000
+Madero;CROISSANT CON JAMON Y QUESO ;36;9966,666667;358800
+Madero;CROISSANT IBERICO;4;16900;67600
+Madero;CROQUE MONSIEUR;1;16900;16900
+Madero;empanada bourguinon;1;6000;6000
+Madero;LE CROISSANT;2;14900;29800
+Madero;bag vianeza pollo                                                                                                       ;4;14900;59600
+Madero;BAGUETIN NORDICO                                                                                                        ;10;17900;179000
+Madero;Croissant  Madame                                                                                                      ;27;10900;294300
+Madero;CROISSANT BRIE                                                                                                          ;14;9900;138600
+Madero;CROISSANT FRANCO INGLES                            ;25;10900;272500
+Madero;CROISSANT MONSIEUR                                                                  ;16;9900;158400
+Madero;MEDITERRANÉE CROISSANT (QUESO, HUEVOY TOMATE)                                                                           ;9;9500;85500
+Madero;PALTA CROISSANT                                                                                                         ;58;13500;783000
+Madero;2 MEDIALUNAS CON JAMON Y QUESO;33;9645,454545;318300
+Madero;Bondiola  empanadas                                                                                                     ;28;3900;109200
+Madero;empanada blanquette                                                                                                             ;21;3900;81900
+Madero;empanadas bourguignon                                                                                                   ;42;3900;163800
+Madero;empanadas parisien                                                                                         ;7;3900;27300
+Madero;empanadas ratatouille                                                                                                   ;14;3900;54600
+Madero;PROMO BONJOUR CROISSANT;59;8584,745763;506500
+Madero;PROMO BONJOUR CROISSANT X 2;1;17900;17900
+Madero;PROMO BONJOUR MEDIALUNAS;215;8644,186047;1858500
+Madero;PROMO BONJOUR MEDIALUNAS X 2;4;17900;71600
+Madero;Ciabatta                                                                                                                ;5;2600;13000
+Madero;INTEGRAL 1KG                                                                                                            ;83;6900;572700
+Madero;INTEGRAL 500GR                                                                                                          ;19;5400;102600
+Madero;SEMILLAS 500GR                                                                                                          ;20;5900;118000
+Madero;SEMILLAS BAGUETTE 330G                                                                                                  ;6;3600;21600
+Madero;TRADICION BAGUETTE 165 GR                                                                                               ;1;2050;2050
+Madero;TRADITION 1KG                                                                                                           ;67;6500;435500
+Madero;TRADITION 500GR                                                                                                         ;20;4900;98000
+Madero;TRADITION BAGUETTE 330G                                                                                                 ;34;3300;112200
+Madero;Gougere                                                                                                                 ;43;4100;176300
+Madero;PALITO PARMIGIANO                                               ;22;5627,272727;123800
+Madero;BROWNIE CHOCOLATE Y NUECES                                                                                              ;5;5900;29500
+Madero;CANNELE                                                                                                                 ;33;4090,909091;135000
+Madero;CARROT CAKE  SIN TACC                                                                                            ;28;7964,285714;223000
+Madero;CHEESE CAKE  SIN TACC                                                                                                ;3;7900;23700
+Madero;CHEESE CAKE Maracuya                                                                                                    ;20;8050;161000
+Madero;CHIPA DE QUESO ( SIN TACC);1;4200;4200
+Madero;COOKIE                                                                                                                  ;35;6500;227500
+Madero;CRUMBLE DE MANZANA                                                                                                    ;32;8050;257600
+Madero;ECLAIR DE CHOCOLATE                                                                                                     ;35;6934,285714;242700
+Madero;ECLAIR DE DDL PARIS- BUENOS AIRES                                                              ;11;6354,545455;69900
+Madero;ECLAIR DE PISTACHO                                                                                                      ;29;7534,482759;218500
+Madero;LEMON PIE INDIVIDUAL                                                                                                    ;37;8013,513514;296500
+Madero;Marquise ch sinTACC                                                                                                     ;16;7900;126400
+Madero;PAN DULCE 500G;2;30000;60000
+Madero;PARIS BREST                                                                                                             ;9;7200;64800
+Madero;cookie pistacho                                                                                                         ;14;6900;96600
+Madero;cookie vegano                                                                                                           ;1;4400;4400
+Madero;CROISSANT                                                                                                               ;247;3727,530364;920700
+Madero;croissant DDL                                                                                                           ;46;5500;253000
+Madero;CROISSANT DE ALMENDRAS                                                                                                  ;80;5933,75;474700
+Madero;CROISSANT DE PISTACHOS                                                                                                  ;70;6560;459200
+Madero;croissant frutos rojos                                                                                                  ;12;5600;67200
+Madero;Croissant nutela                                                                                                       ;77;6068,831169;467300
+Madero;croissant Pastelera                                                                                                     ;75;5500;412500
+Madero;Danesa                                                                                                                  ;23;5739,130435;132000
+Madero;KOUIGN AMANN                                                                                                            ;22;3927,272727;86400
+Madero;lemon croissant                                                                                                         ;7;5600;39200
+Madero;medialuna grasa                                                                                                        ;190;2434,736842;462600
+Madero;medialuna manteca                                                                                                             ;798;2442,105263;1948800
+Madero;moño de frutos rojos                                                                                                    ;65;5950,769231;386800
+Madero;PAN DE CHOCOLATE                                                                                                        ;65;5584,615385;363000
+Madero;PAN DE CHOCOLATE & ALMENDRAS                                                                                            ;3;6100;18300
+Madero;pan suizo                                                                                                               ;22;5940,909091;130700
+Madero;ROLL DE CANELA                                                                                                          ;39;5053,846154;197100
+Madero;Scon de queso                                                                                                           ;39;4315,384615;168300
