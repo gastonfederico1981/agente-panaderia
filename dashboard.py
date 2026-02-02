@@ -40,11 +40,21 @@ def node_analista(state: AgentState):
     except Exception as e:
         return {"audit_report": f"❌ Error de IA: {str(e)}"}
 
-workflow = StateGraph(AgentState)
-workflow.add_node("analizar", node_analista)
-workflow.set_entry_point("analizar")
-workflow.add_edge("analizar", END)
-app_agente = workflow.compile(checkpointer=MemorySaver())
+# 1. Definimos la lógica que antes era un "nodo"
+def ejecutar_agente(inputs):
+    # Aquí llamas a tu función node_analista que ya tenías creada
+    resultado = node_analista(inputs)
+    return resultado
+
+# 2. En lugar de app_agente = workflow.compile(), usamos una función simple
+def app_agente_simple(input_text):
+    # Simulamos el estado inicial que esperaba tu grafo
+    estado_inicial = {"messages": [input_text]}
+    return ejecutar_agente(estado_inicial)
+
+# 3. Para la memoria (MemorySaver), usamos el st.session_state de Streamlit
+if "historial" not in st.session_state:
+    st.session_state.historial = []
 
 # --- BARRA LATERAL (MENÚ DE NAVEGACIÓN) ---
 with st.sidebar:
