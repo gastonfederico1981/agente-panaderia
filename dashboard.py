@@ -91,37 +91,41 @@ elif menu == "📊 Auditoría Activa":
     if archivos and st.session_state.api_key_actual:
         st.session_state.all_summary = ""
         for arc in archivos:
+            # Detectar codificación y separador automáticamente
             df = pd.read_csv(arc, sep=None, engine='python', encoding='latin1')
             
-            # Limpieza para archivos tipo Madero
+            # Función de limpieza de moneda
             def limpiar(v):
                 s = str(v).replace('$', '').replace('.', '').replace(',', '.').strip()
                 try: return float(s)
                 except: return 0.0
 
+            # Identificar columnas de dinero
             cols_din = [c for c in df.columns if any(p in c.upper() for p in ['TOTAL', 'IMPORTE', 'NETO'])]
-            for c in cols_din: df[c] = df[c].apply(limpiar)
+            for c in cols_din: 
+                df[c] = df[c].apply(limpiar)
             
             venta = df[cols_din].sum().max() if cols_din else 0.0
-            st.session_state.all_summary += f"\nArchivo: {arc.name}\nVenta Total: ${venta:,.2f}\nDatos:\n{df.head(50).to_string()}"
-            st.success(f"✅ {arc.name} procesado. Venta detectada: ${venta:,.2f}")
+            st.session_state.all_summary += f"\nArchivo: {arc.name}\nVenta Total: ${venta:,.2f}\nDatos:\n{df.head(10).to_string()}"
+            st.success(f"✅ {arc.name} procesado. Venta: ${venta:,.2f}")
 
-    if st.button("🚀 GENERAR REPORTE CON IA"):
-            config = {"configurable": {"thread_id": "demo_1"}}
+        # --- BOTÓN DE IA (Alineado correctamente) ---
         if st.button("🚀 GENERAR REPORTE CON IA"):
-            # En lugar de app_agente.invoke, llamamos directo a nuestra función
-            res = ejecutar_agente({"data_summary": st.session_state.all_summary})
-            st.session_state.reporte_actual = res["audit_report"]
+            with st.spinner("El Auditor IA está analizando los datos..."):
+                # Llamada directa a la función sin LangGraph
+                res = ejecutar_agente({"data_summary": st.session_state.all_summary})
+                st.session_state.reporte_actual = res["audit_report"]
 
     if st.session_state.reporte_actual:
-    st.markdown(st.session_state.reporte_actual)
+        st.markdown("### 📋 Reporte de Auditoría")
+        st.markdown(st.session_state.reporte_actual)
         st.divider()
         c1, c2 = st.columns(2)
         with c1:
             if st.button("🗑️ Analizar Desperdicio"):
-                st.warning("IA buscando patrones de mermas...")
+                st.warning("Buscando patrones de mermas...")
         with c2:
-            num = "5491112345678"
+            num = "5491112345678" # Cambiá por tu número
             link = f"https://wa.me/{num}?text=Auditoria%20Lista"
             st.markdown(f'<a href="{link}" target="_blank"><button style="width:100%; background-color:#25D366; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer;">🟢 Enviar por WhatsApp</button></a>', unsafe_allow_html=True)
 
