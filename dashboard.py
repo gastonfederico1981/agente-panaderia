@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
+import requests
+import json
 import os
 from typing import TypedDict  # <--- AGREGÁ ESTA LÍNEA
 from dotenv import load_dotenv
@@ -34,24 +36,30 @@ class AgentState(TypedDict):
 
 def node_analista(state: AgentState):
     try:
-        llave = os.environ.get("GOOGLE_API_KEY")
-        genai.configure(api_key=llave)
+        api_key = os.environ.get("GOOGLE_API_KEY")
+        # URL MANUALMENTE DIRIGIDA A V1 (ESTABLE)
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
         
-        # Intentamos listar los modelos para ver qué hay disponible en este entorno
-        available_models = [m.name for m in genai.list_models()]
+        # Si la v1beta falla incluso por HTTP, simplemente cambiá 'v1beta' por 'v1' en la URL de arriba
         
-        # Intentamos usar 'gemini-pro' que es el más antiguo y compatible
-        # Si 'gemini-1.5-flash' falla, este suele ser el salvavidas.
-        model_name = 'models/gemini-pro' 
-        model = genai.GenerativeModel(model_name)
+        headers = {'Content-Type': 'application/json'}
+        payload = {
+            "contents": [{
+                "parts": [{"text": f"Analiza estos datos de panadería: {state['data_summary']}"}]
+            }]
+        }
         
-        prompt = f"Analiza estos datos: {state['data_summary']}"
-        response = model.generate_content(prompt)
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        res_json = response.json()
         
-        return {"audit_report": response.text}
+        if response.status_code == 200:
+            return {"audit_report": res_json['candidates'][0]['content']['parts'][0]['text']}
+        else:
+            error_msg = res_json.get('error', {}).get('message', 'Error desconocido')
+            return {"audit_report": f"❌ Error de API ({response.status_code}): {error_msg}"}
+            
     except Exception as e:
-        # Si vuelve a fallar, el error nos dirá qué modelos SÍ existen
-        return {"audit_report": f"❌ Error de Modelos. Disponibles: {str(available_models if 'available_models' in locals() else 'No lista')} - Error: {str(e)}"}
+        return {"audit_report": f"⚠️ Error de conexión: {str(e)}"}
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
     # Aquí llamas a tu función node_analista que ya tenías creada
