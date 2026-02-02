@@ -32,7 +32,8 @@ def node_analista(state: AgentState):
         api_key = os.environ.get("GOOGLE_API_KEY")
         
         # USAMOS EL MODELO QUE SÍ VEMOS EN TU LISTA
-        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={api_key}"
+       # Probamos con la versión LITE que tiene cuotas más amplias
+url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite-001:generateContent?key={api_key}"
         
         headers = {'Content-Type': 'application/json'}
         payload = {
