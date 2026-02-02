@@ -31,13 +31,13 @@ def node_analista(state: AgentState):
     try:
         api_key = os.environ.get("GOOGLE_API_KEY")
         
-        # URL estable para el plan gratuito
-        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={api_key}"
+        # CAMBIO: Usamos v1beta y el modelo 2.0-flash que SÍ estaba en tu lista
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
         
         headers = {'Content-Type': 'application/json'}
         payload = {
             "contents": [{
-                "parts": [{"text": f"Analiza estos datos de ventas: {state['data_summary']}"}]
+                "parts": [{"text": f"Actúa como auditor de panaderías. Analiza estos datos: {state['data_summary']}"}]
             }]
         }
         
@@ -47,11 +47,11 @@ def node_analista(state: AgentState):
         if response.status_code == 200:
             return {"audit_report": res_json['candidates'][0]['content']['parts'][0]['text']}
         else:
-            error_msg = res_json.get('error', {}).get('message', 'Error desconocido')
-            return {"audit_report": f"❌ Error de API ({response.status_code}): {error_msg}"}
+            msg = res_json.get('error', {}).get('message', 'Error desconocido')
+            return {"audit_report": f"❌ Error de API ({response.status_code}): {msg}"}
             
     except Exception as e:
-        return {"audit_report": f"⚠️ Error en la función: {str(e)}"}
+        return {"audit_report": f"⚠️ Error crítico: {str(e)}"}
 
 # 1. Definimos la lógica que antes era un "nodo"
 def ejecutar_agente(inputs):
